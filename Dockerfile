@@ -4,7 +4,7 @@ MAINTAINER Dirk Kirsten, <dk@basex.org>
 
 # Download latest BaseX release
 RUN apt-get install curl unzip
-RUN curl http://files.basex.org/releases/8.2/BaseX82.zip -o /tmp/BaseX.zip
+RUN curl http://files.basex.org/releases/8.3/BaseX83.zip -o /tmp/BaseX.zip
 RUN unzip /tmp/BaseX.zip -d /opt/
 RUN mkdir /data /repo /webapp
 
@@ -13,7 +13,6 @@ VOLUME ["/data", "/repo", "/webapp"]
 
 # Define working directory.
 WORKDIR /opt/basex
-RUN pwd
 COPY .basex /opt/basex/.basex
 
 # Expose port.
